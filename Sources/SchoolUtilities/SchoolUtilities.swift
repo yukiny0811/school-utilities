@@ -27,3 +27,9 @@ public extension UIColor {
         self.init(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha))
     }
 }
+
+public extension CGSize {
+    init(width: Float, height: Float) {
+        self = CGSize(width: CGFloat(width), height: CGFloat(height))
+    }
+}
