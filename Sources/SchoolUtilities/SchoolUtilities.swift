@@ -33,3 +33,15 @@ public extension CGSize {
         self = CGSize(width: CGFloat(width), height: CGFloat(height))
     }
 }
+
+public extension Float {
+    var cgFloat: CGFloat {
+        CGFloat(self)
+    }
+}
+
+public extension CGFloat {
+    var float: Float {
+        Float(self)
+    }
+}
