@@ -21,3 +21,9 @@ public extension CGPoint {
         self = CGPoint(x: CGFloat(x), y: CGFloat(y))
     }
 }
+
+public extension UIColor {
+    convenience init(red: Float, green: Float, blue: Float, alpha: Float) {
+        self.init(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha))
+    }
+}
