@@ -15,3 +15,9 @@ public extension Data {
         UIImage(data: self)
     }
 }
+
+public extension CGPoint {
+    init(x: Float, y: Float) {
+        self = CGPoint(x: CGFloat(x), y: CGFloat(y))
+    }
+}
