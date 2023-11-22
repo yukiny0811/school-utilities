@@ -1,16 +1,31 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 
-//#if os(iOS)
+#if os(iOS)
 
-//import UIKit
+import UIKit
+
+public extension UIImage {
+    func toData() -> Data? {
+        self.jpegData(compressionQuality: 1.0)
+    }
+}
+
+public extension Data {
+    func jpeg() -> UIImage? {
+        UIImage(data: self)
+    }
+}
+
+#endif
+
 import Foundation
 
 public extension CGPoint {
     func distance(from other: CGPoint) -> CGFloat {
         let first = (other.x - self.x) * (other.x - self.x)
         let second = (other.y - self.y) * (other.y - self.y)
-        return CGFloat(pow(first + second, 0.5))
+        return pow(first + second, 0.5)
     }
 }
 extension CGPoint: Identifiable {
@@ -30,5 +45,3 @@ public extension CGFloat {
         Float(self)
     }
 }
-
-//#endif
