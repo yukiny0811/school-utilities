@@ -10,7 +10,7 @@ public extension CGPoint {
     func distance(from other: CGPoint) -> CGFloat {
         let first = (other.x - self.x) * (other.x - self.x)
         let second = (other.y - self.y) * (other.y - self.y)
-        return pow(first + second, 0.5)
+        return CGFloat(pow(first + second, 0.5))
     }
 }
 extension CGPoint: Identifiable {
