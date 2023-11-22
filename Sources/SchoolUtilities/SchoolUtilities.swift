@@ -1,22 +1,22 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 
-#if os(iOS)
+//#if os(iOS)
 
-import UIKit
+//import UIKit
 import Foundation
 
-public extension UIImage {
-    func toData() -> Data? {
-        self.jpegData(compressionQuality: 1.0)
-    }
-}
-
-public extension Data {
-    func jpeg() -> UIImage? {
-        UIImage(data: self)
-    }
-}
+//public extension UIImage {
+//    func toData() -> Data? {
+//        self.jpegData(compressionQuality: 1.0)
+//    }
+//}
+//
+//public extension Data {
+//    func jpeg() -> UIImage? {
+//        UIImage(data: self)
+//    }
+//}
 
 public extension CGPoint {
     init(x: Float, y: Float) {
@@ -34,11 +34,11 @@ extension CGPoint: Identifiable {
     }
 }
 
-public extension UIColor {
-    convenience init(red: Float, green: Float, blue: Float, alpha: Float) {
-        self.init(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha))
-    }
-}
+//public extension UIColor {
+//    convenience init(red: Float, green: Float, blue: Float, alpha: Float) {
+//        self.init(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha))
+//    }
+//}
 
 public extension CGSize {
     init(width: Float, height: Float) {
@@ -58,4 +58,4 @@ public extension CGFloat {
     }
 }
 
-#endif
+//#endif
